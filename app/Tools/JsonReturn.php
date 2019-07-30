@@ -21,8 +21,8 @@ class JsonReturn
             if ($data){
                 $config[$str]['data'] = $data;
             }
-            return json_encode($config[$str]);
+            return json_encode($config[$str],JSON_UNESCAPED_UNICODE);
         }
-        return json_encode(['status'=>false,'response_code'=>10000,'msg'=>'未知错误！']);
+        return json_encode(['status'=>false,'response_code'=>10000,'msg'=>'未知错误！'],JSON_UNESCAPED_UNICODE);
     }
 }
